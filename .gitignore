@@ -1,3 +1,6 @@
 
+#BLock IntelliJ
+.idea
+
 #Block executable 
 *.exe

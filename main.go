@@ -29,8 +29,13 @@ func main() {
 	
 	instanceString := pair[0]
 	databaseName := pair[1]
-	folderPath := args[0]
-	
+
+	var folderPath string
+	if len(args) == 0 {
+		log.Fatal("Folder Path not provided")
+	}
+	folderPath = args[0]
+
 	
 	files, err := ioutil.ReadDir(folderPath)
 	if err != nil {
